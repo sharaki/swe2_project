@@ -158,7 +158,7 @@ public class Post {
 		ArrayList<Post> posts = new ArrayList();
 		Friends f = new Friends();
 		ArrayList<Friends> friend = f.Friendlist(userid);
-		System.out.print("size = " + friend.size());
+		//System.out.print("size = " + friend.size());
 		ArrayList data = new ArrayList();
 
 		for (int i = 0; i < friend.size(); i++) {
@@ -175,9 +175,9 @@ public class Post {
 		Query q = new Query("post");
 		PreparedQuery pq = datastore.prepare(q);
 		for (Entity entity : pq.asIterable()) {
-			System.out.print("enter\n");
+			//System.out.print("enter\n");
 			for (int i = 0; i < data.size(); i++) {
-				System.out.print("loop\n");
+				//System.out.print("loop\n");
 				if (data.get(i).toString()
 						.equals(entity.getProperty("user_id").toString())) {
 					System.out.print("l\n");

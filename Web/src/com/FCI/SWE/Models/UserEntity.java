@@ -215,8 +215,7 @@ public class UserEntity {
 	 * @return boolean if user is saved correctly or not
 	 */
 	public Boolean saveUser() {
-		DatastoreService datastore = DatastoreServiceFactory
-				.getDatastoreService();
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		Query gaeQuery = new Query("users");
 		PreparedQuery pq = datastore.prepare(gaeQuery);
 		List<Entity> list = pq.asList(FetchOptions.Builder.withDefaults());

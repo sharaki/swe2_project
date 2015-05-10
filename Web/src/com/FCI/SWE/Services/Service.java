@@ -400,7 +400,7 @@ public class Service {
 		if (P.newpost(user_ID, user_name, feeling, content, type) != "post") {
 			object.put("Status", "Failed");
 		} else {
-			object.put("Status", "OKjjjjjj");
+			object.put("Status", "OK");
 		}
 		return object.toString();
 

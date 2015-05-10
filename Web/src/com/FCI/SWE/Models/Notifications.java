@@ -56,6 +56,9 @@ public class Notifications {
 		this.not_id=n_id;
 	}
 	
+
+	
+
 	public String getFriend_name() {
 		return friend_name;
 	}
@@ -83,7 +86,6 @@ public class Notifications {
 		Query gaeQuery = new Query("Notifications");
 		PreparedQuery pq = datastore.prepare(gaeQuery);
 		for (Entity entity : pq.asIterable()) {
-			// System.out.println(entity.getProperty("name").toString());
 			if (entity.getProperty("friend_id").toString().equals(user_id)) {
 				Notifications N=new Notifications(entity.getProperty("user_id")
 						.toString(), entity.getProperty("user_name").toString(),
